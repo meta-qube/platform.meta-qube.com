@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meta Qube Platform — Startup Compiler, Operations Runtime, and Module Catalog. Reusable meta-modules with declarative configuration and expert review.">
+  <meta name="theme-color" content="#9333EA">
+  <title>Meta Qube Platform — Compile ideas. Run operations.</title>
+
+  <link rel="alternate" hreflang="en" href="https://platform.meta-qube.com/">
+  <link rel="alternate" hreflang="uk" href="https://platform.meta-qube.com/ua/">
+  <link rel="alternate" hreflang="ru" href="https://platform.meta-qube.com/ru/">
+  <link rel="alternate" hreflang="x-default" href="https://platform.meta-qube.com/">
+
+  <link rel="icon" href="https://meta-qube.com/favicon.ico" sizes="any">
+  <link rel="icon" href="https://meta-qube.com/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="https://meta-qube.com/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="https://meta-qube.com/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="audience-platform">
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <img src="https://meta-qube.com/images/metaqube.png" alt="" width="36" height="36">
+        Meta Qube
+      </a>
+      <span class="audience-badge">Platform</span>
+      <nav class="lang-switch" aria-label="Language">
+        <a href="/" class="lang-link active" hreflang="en" aria-current="page">EN</a>
+        <a href="/ua/" class="lang-link" hreflang="uk">UA</a>
+        <a href="/ru/" class="lang-link" hreflang="ru">RU</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="4" y1="17" x2="20" y2="17"/>
+        </svg>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="#subsystems">Subsystems</a>
+        <a href="#runtime">Runtime</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#lifecycle">Lifecycle</a>
+        <a href="#docs" class="nav-cta">Handbook</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-glow"></div>
+        <div class="hero-grid"></div>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="eyebrow">Meta Qube Platform</p>
+          <h1>Compile ideas.<br><span>Run operations.</span></h1>
+          <p class="hero-lead">
+            Meta Qube Platform turns founder input into metadata that configures
+            reliable, customizable meta-modules and runs the resulting business
+            operations in the cloud. Expert-reviewed modules let startups reuse
+            proven tools instead of rebuilding from scratch.
+          </p>
+          <div class="hero-actions">
+            <a href="#catalog" class="btn btn-primary">Browse modules</a>
+            <a href="#subsystems" class="btn btn-secondary">Explore subsystems</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img
+            class="hero-cube"
+            src="https://meta-qube.com/images/metaqube.png"
+            alt="Meta Qube — modular startup architecture represented as a voxel globe cube"
+            width="448"
+            height="448"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="pillars" aria-label="Three platform subsystems">
+      <div class="container pillars-grid pillars-grid-3">
+        <div class="pillar">
+          <div class="pillar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <div class="pillar-label">Startup Compiler</div>
+          <div class="pillar-desc">Guided classification and assembly of startup packages</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <div class="pillar-label">Operations Runtime</div>
+          <div class="pillar-desc">Cloud execution of workflows, agents, and integrations</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7"/>
+              <rect x="14" y="3" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/>
+            </svg>
+          </div>
+          <div class="pillar-label">Module Catalog</div>
+          <div class="pillar-desc">Registry of declarative meta-modules with review status</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="subsystems">
+      <div class="container">
+        <header class="section-header centered">
+          <p class="section-tag">Subsystems</p>
+          <h2>Three subsystems, one platform</h2>
+          <p>
+            The Startup Compiler assembles packages from the Module Catalog.
+            The Operations Runtime executes them in the cloud. Together they
+            turn ideas into running business operations.
+          </p>
+        </header>
+        <div class="platform-grid">
+          <article class="platform-card">
+            <div class="platform-badge">Startup Compiler</div>
+            <h3>Compile ideas</h3>
+            <p>
+              Guided classification and assembly. The compiler collects founder
+              answers, selects compatible meta-modules, and produces a launch-ready
+              startup configuration.
+            </p>
+            <ul class="feature-list">
+              <li>Positioning, product structure &amp; MVP scope</li>
+              <li>Business model, pricing &amp; landing page</li>
+              <li>CRM pipeline, sales &amp; payment flows</li>
+              <li>Technical architecture, API integrations &amp; UI apps</li>
+              <li>Legal drafts, pitch structure &amp; risk report</li>
+              <li>Validation plan, metrics dashboard &amp; runtime workflows</li>
+            </ul>
+          </article>
+          <article class="platform-card">
+            <div class="platform-badge accent-green">Operations Runtime</div>
+            <h3>Run operations</h3>
+            <p>
+              Cloud execution of business processes from day one. Built on
+              <a href="https://github.com/metarhia/Docs">Metarhia Stack</a> —
+              API, domain, data access, protocol, and infrastructure layers.
+            </p>
+            <ul class="feature-list">
+              <li>Workflows, agents, schedulers &amp; task queues</li>
+              <li>Integrations: CRM, email, payments, messaging</li>
+              <li>Tenancy, auth &amp; audit logging</li>
+              <li>Deployment, observability &amp; rollback</li>
+            </ul>
+          </article>
+          <article class="platform-card">
+            <div class="platform-badge accent-amber">Module Catalog</div>
+            <h3>Reusable meta-modules</h3>
+            <p>
+              A catalog of reusable meta-modules with declarative DSL-style
+              configuration. Each module declares contracts, compatibility rules,
+              risk tags, and review status.
+            </p>
+            <ul class="feature-list">
+              <li>Search, compatibility check &amp; module selection</li>
+              <li>Version history &amp; review badges</li>
+              <li>Lifecycle from draft through deployment</li>
+              <li>Expert review gate for high-risk domains</li>
+            </ul>
+          </article>
+          <article class="platform-card">
+            <div class="platform-badge">Cross-subsystem flow</div>
+            <h3>From input to running operations</h3>
+            <p>
+              Founder input flows through classification, module selection,
+              expert review, runtime deployment, and continuous operations —
+              with the catalog as the single source of module truth.
+            </p>
+            <ul class="feature-list">
+              <li>Compiler → Catalog: select compatible modules</li>
+              <li>Compiler → Runtime: deploy configuration</li>
+              <li>Catalog → Runtime: load deployable artifacts</li>
+              <li>Runtime → Compiler: metrics and startup state</li>
+            </ul>
+          </article>
+        </div>
+        <div class="tag-cloud" aria-label="Compiler outputs">
+          <span class="tag">Positioning</span>
+          <span class="tag">Product structure</span>
+          <span class="tag">MVP scope</span>
+          <span class="tag">Business model</span>
+          <span class="tag">Pricing</span>
+          <span class="tag">Landing page</span>
+          <span class="tag">CRM pipeline</span>
+          <span class="tag">Sales flow</span>
+          <span class="tag">Payment flow</span>
+          <span class="tag">Support flow</span>
+          <span class="tag">Technical architecture</span>
+          <span class="tag">API integrations</span>
+          <span class="tag">UI applications</span>
+          <span class="tag">Legal drafts</span>
+          <span class="tag">Pitch structure</span>
+          <span class="tag">Risk report</span>
+          <span class="tag">Validation plan</span>
+          <span class="tag">Metrics dashboard</span>
+          <span class="tag">Runtime workflows</span>
+          <span class="tag">Integration map</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="runtime">
+      <div class="container">
+        <header class="section-header centered">
+          <p class="section-tag">Operations Runtime</p>
+          <h2>Metarhia Stack layers</h2>
+          <p>
+            The Operations Runtime is built on Metarhia Stack — a layered
+            architecture for API endpoints, domain logic, data access, protocols,
+            and infrastructure.
+          </p>
+        </header>
+        <div class="module-contract contract-5">
+          <div class="contract-item">
+            <span class="contract-key">API layer</span>
+            <span class="contract-val">Endpoints, units, schema validation</span>
+          </div>
+          <div class="contract-item">
+            <span class="contract-key">Domain layer</span>
+            <span class="contract-val">App state, workflows, business rules</span>
+          </div>
+          <div class="contract-item">
+            <span class="contract-key">Data access</span>
+            <span class="contract-val">PostgreSQL, Redis, Globalstorage</span>
+          </div>
+          <div class="contract-item">
+            <span class="contract-key">Protocol layer</span>
+            <span class="contract-val">metacom, HTTP, WebSocket, webhooks</span>
+          </div>
+          <div class="contract-item">
+            <span class="contract-key">Infrastructure</span>
+            <span class="contract-val">Logging, scheduling, multithreading, sandbox</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog">
+      <div class="container">
+        <header class="section-header centered wide">
+          <p class="section-tag">Module Catalog</p>
+          <h2>Reusable meta-modules</h2>
+          <p>
+            A catalog of reusable meta-modules with declarative DSL-style
+            configuration. Expert-reviewed blocks for security, infrastructure,
+            orchestration, data, communication, commerce, and more.
+          </p>
+        </header>
+        <div class="catalog-grid">
+          <article class="catalog-card">
+            <h3>Security &amp; access</h3>
+            <ul class="catalog-list">
+              <li>Auth: OAuth 2.0, OpenID, SSO</li>
+              <li>Passkeys, MFA / 2FA</li>
+              <li>Session management</li>
+              <li>RBAC</li>
+              <li>Logging: access and audit logs</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Infrastructure</h3>
+            <ul class="catalog-list">
+              <li>Load balancer</li>
+              <li>CDN integration</li>
+              <li>Rate limiting</li>
+              <li>Service discovery</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Orchestration</h3>
+            <ul class="catalog-list">
+              <li>Workflow engine</li>
+              <li>Saga</li>
+              <li>Scheduler</li>
+              <li>Task queue</li>
+              <li>Distributed locks</li>
+              <li>Event bus</li>
+              <li>Webhook dispatcher</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Integration</h3>
+            <ul class="catalog-list">
+              <li>Protocol connectors: REST, GraphQL, gRPC</li>
+              <li>External messaging: Telegram, etc.</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Data &amp; storage</h3>
+            <ul class="catalog-list">
+              <li>Distributed database: Globalstorage
+                <ul>
+                  <li>Search and indexing</li>
+                  <li>Full-text search</li>
+                  <li>Continuous backup/restore</li>
+                  <li>Continuous migration</li>
+                  <li>Continuous calculations</li>
+                </ul>
+              </li>
+              <li>Schemas</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Observability</h3>
+            <ul class="catalog-list">
+              <li>Telemetry and monitoring</li>
+              <li>Error tracking</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Communication</h3>
+            <ul class="catalog-list">
+              <li>Chat engine</li>
+              <li>Chatbots</li>
+              <li>Landing page</li>
+              <li>Feeds (news channel)</li>
+              <li>Email delivery, receiving, campaigns</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Commerce</h3>
+            <ul class="catalog-list">
+              <li>Payments
+                <ul>
+                  <li>Types: one-time, subscriptions, usage-based</li>
+                  <li>Features: retries, refunds, payouts, referrals</li>
+                </ul>
+              </li>
+              <li>Product and customer
+                <ul>
+                  <li>Customer onboarding</li>
+                  <li>Subscription management</li>
+                  <li>Feedback</li>
+                  <li>Feature requests and bug reports</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Intelligence &amp; tools</h3>
+            <ul class="catalog-list">
+              <li>Report generation</li>
+              <li>AI integration</li>
+              <li>Security assistant</li>
+              <li>Calendar</li>
+              <li>Test runner</li>
+              <li>Parental control</li>
+              <li>Startup wizard</li>
+              <li>Pitch wizard</li>
+              <li>Module registry</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="formula" id="lifecycle">
+      <div class="container">
+        <header class="section-header centered">
+          <p class="section-tag">Module lifecycle</p>
+          <h2>From draft to deployment</h2>
+          <p>
+            Every meta-module moves through review, generation, verification,
+            and publication before it reaches production — with rollback support.
+          </p>
+        </header>
+        <div class="tag-cloud" aria-label="Module lifecycle stages">
+          <span class="tag tag-lifecycle">Draft</span>
+          <span class="tag tag-lifecycle">Reviewed draft</span>
+          <span class="tag tag-lifecycle">Generated</span>
+          <span class="tag tag-lifecycle">Reviewed module</span>
+          <span class="tag tag-lifecycle">Verified</span>
+          <span class="tag tag-lifecycle">Published</span>
+          <span class="tag tag-lifecycle">Deployed</span>
+          <span class="tag tag-lifecycle">Updated / Rolled Back</span>
+        </div>
+        <div class="formula-box" style="margin-top: 2rem;">
+          <code class="formula-code">Draft → Reviewed draft → Generated → Reviewed module → Verified → Published → Deployed → Updated / Rolled Back</code>
+        </div>
+      </div>
+    </section>
+
+    <section class="capabilities">
+      <div class="container">
+        <header class="section-header centered">
+          <p class="section-tag">Meta-modules</p>
+          <h2>Declarative, composable, verifiable</h2>
+          <p>
+            Expert-reviewed modules reduce security risk, prevent repeated errors,
+            and accelerate startup assembly — with lower cost than rebuilding
+            from scratch.
+          </p>
+        </header>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
+            <h3>Declarative DSL</h3>
+            <p>
+              Meta-modules use declarative DSL-style configuration. Founders and
+              agents configure behavior through metadata — not bespoke code for
+              every startup.
+            </p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"/>
+                <rect x="14" y="3" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/>
+                <rect x="3" y="14" width="7" height="7"/>
+              </svg>
+            </div>
+            <h3>Module contracts</h3>
+            <p>
+              Every module declares inputs, outputs, constraints, compatibility
+              rules, risk tags, version, owner, review status, and verification
+              logic.
+            </p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3>Expert review gate</h3>
+            <p>
+              AI, engineers, and domain experts contribute modules subject to
+              review. High-risk domains escalate to human judgment before
+              publication.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="docs">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Explore the platform handbook</h2>
+          <p>
+            Architecture records, ADRs, glossary, meta-module schema, and
+            subsystem interfaces — maintained in the platform repository.
+          </p>
+          <div class="cta-actions">
+            <a href="https://github.com/meta-qube/platform" class="btn btn-primary">Platform repository</a>
+            <a href="https://github.com/meta-qube/platform/tree/main/handbook" class="btn btn-secondary">Handbook</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="https://meta-qube.com/images/metaqube.png" alt="" width="24" height="24">
+        <span>&copy; 2026 Meta Qube. All rights reserved.</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://meta-qube.com/">Main site</a>
+        <a href="https://founders.meta-qube.com/">For founders</a>
+        <a href="https://capital.meta-qube.com/">For investors</a>
+        <a href="mailto:timur@metarhia.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    menuToggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', open);
+    });
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>

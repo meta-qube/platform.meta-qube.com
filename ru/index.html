@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meta Qube Platform — компилятор стартапов, среда выполнения операций и каталог модулей. Проверенные мета-модули с декларативной конфигурацией.">
+  <meta name="theme-color" content="#9333EA">
+  <title>Meta Qube Platform — Компилируй идеи. Запускай операции.</title>
+
+  <link rel="alternate" hreflang="en" href="https://platform.meta-qube.com/">
+  <link rel="alternate" hreflang="uk" href="https://platform.meta-qube.com/ua/">
+  <link rel="alternate" hreflang="ru" href="https://platform.meta-qube.com/ru/">
+  <link rel="alternate" hreflang="x-default" href="https://platform.meta-qube.com/">
+
+  <link rel="icon" href="https://meta-qube.com/favicon.ico" sizes="any">
+  <link rel="icon" href="https://meta-qube.com/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="https://meta-qube.com/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="https://meta-qube.com/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="audience-platform">
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="/ru/" class="logo">
+        <img src="https://meta-qube.com/images/metaqube.png" alt="" width="36" height="36">
+        Meta Qube
+      </a>
+      <span class="audience-badge">Платформа</span>
+      <nav class="lang-switch" aria-label="Язык">
+        <a href="/" class="lang-link" hreflang="en">EN</a>
+        <a href="/ua/" class="lang-link" hreflang="uk">UA</a>
+        <a href="/ru/" class="lang-link active" hreflang="ru" aria-current="page">RU</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="4" y1="17" x2="20" y2="17"/>
+        </svg>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="#subsystems">Подсистемы</a>
+        <a href="#runtime">Runtime</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#lifecycle">Жизненный цикл</a>
+        <a href="#docs" class="nav-cta">Справочник</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-glow"></div>
+        <div class="hero-grid"></div>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="eyebrow">Meta Qube Platform</p>
+          <h1>Компилируй идеи.<br><span>Запускай операции.</span></h1>
+          <p class="hero-lead">
+            Meta Qube Platform превращает ввод основателя в метаданные, которые
+            настраивают надёжные, настраиваемые мета-модули и запускают бизнес-операции
+            в облаке. Экспертно проверенные модули позволяют стартапам повторно
+            использовать проверенные инструменты вместо создания с нуля.
+          </p>
+          <div class="hero-actions">
+            <a href="#catalog" class="btn btn-primary">Смотреть модули</a>
+            <a href="#subsystems" class="btn btn-secondary">Изучить подсистемы</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img
+            class="hero-cube"
+            src="https://meta-qube.com/images/metaqube.png"
+            alt="Meta Qube — модульная архитектура стартапа в виде воксельного куба-глобуса"
+            width="448"
+            height="448"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="pillars" aria-label="Три подсистемы платформы">
+      <div class="container pillars-grid pillars-grid-3">
+        <div class="pillar">
+          <div class="pillar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <div class="pillar-label">Компилятор стартапов</div>
+          <div class="pillar-desc">Управляемая классификация и сборка стартап-пакетов</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <div class="pillar-label">Среда выполнения</div>
+          <div class="pillar-desc">Облачное выполнение процессов, агентов и интеграций</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7"/>
+              <rect x="14" y="3" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/>
+            </svg>
+          </div>
+          <div class="pillar-label">Каталог модулей</div>
+          <div class="pillar-desc">Реестр декларативных мета-модулей со статусом проверки</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="subsystems">
+      <div class="container">
+        <header class="section-header centered">
+          <p class="section-tag">Подсистемы</p>
+          <h2>Три подсистемы — одна платформа</h2>
+          <p>
+            Компилятор стартапов собирает пакеты из Каталога модулей. Среда
+            выполнения запускает их в облаке. Вместе они превращают идеи в
+            работающие бизнес-операции.
+          </p>
+        </header>
+        <div class="platform-grid">
+          <article class="platform-card">
+            <div class="platform-badge">Компилятор стартапов</div>
+            <h3>Компилируй идеи</h3>
+            <p>
+              Управляемая классификация и сборка. Компилятор собирает ответы основателя,
+              выбирает совместимые мета-модули и формирует конфигурацию, готовую к запуску.
+            </p>
+            <ul class="feature-list">
+              <li>Позиционирование, структура продукта и MVP</li>
+              <li>Бизнес-модель, ценообразование и лендинг</li>
+              <li>CRM-воронка, продажи и платежи</li>
+              <li>Техническая архитектура, API и UI-приложения</li>
+              <li>Юридические черновики, питч и отчёт о рисках</li>
+              <li>План валидации, метрики и runtime-процессы</li>
+            </ul>
+          </article>
+          <article class="platform-card">
+            <div class="platform-badge accent-green">Среда выполнения</div>
+            <h3>Запускай операции</h3>
+            <p>
+              Облачное выполнение бизнес-процессов с первого дня. Построено на
+              <a href="https://github.com/metarhia/Docs">Metarhia Stack</a> —
+              слои API, домена, доступа к данным, протоколов и инфраструктуры.
+            </p>
+            <ul class="feature-list">
+              <li>Рабочие процессы, агенты, планировщики и очереди</li>
+              <li>Интеграции: CRM, email, платежи, мессенджеры</li>
+              <li>Мультитенантность, аутентификация и аудит</li>
+              <li>Развёртывание, наблюдаемость и откат</li>
+            </ul>
+          </article>
+          <article class="platform-card">
+            <div class="platform-badge accent-amber">Каталог модулей</div>
+            <h3>Повторно используемые мета-модули</h3>
+            <p>
+              Каталог мета-модулей с декларативной DSL-конфигурацией. Каждый модуль
+              объявляет контракты, правила совместимости, теги риска и статус проверки.
+            </p>
+            <ul class="feature-list">
+              <li>Поиск, проверка совместимости и выбор модулей</li>
+              <li>История версий и значки проверки</li>
+              <li>Жизненный цикл от черновика до развёртывания</li>
+              <li>Экспертная проверка для высокорисковых доменов</li>
+            </ul>
+          </article>
+          <article class="platform-card">
+            <div class="platform-badge">Межподсистемный поток</div>
+            <h3>От ввода до работающих операций</h3>
+            <p>
+              Ввод проходит классификацию, выбор модулей, экспертную проверку,
+              развёртывание runtime и непрерывные операции — с каталогом как
+              единым источником истины о модулях.
+            </p>
+            <ul class="feature-list">
+              <li>Компилятор → Каталог: выбор совместимых модулей</li>
+              <li>Компилятор → Runtime: конфигурация развёртывания</li>
+              <li>Каталог → Runtime: артефакты для развёртывания</li>
+              <li>Runtime → Компилятор: метрики и состояние стартапа</li>
+            </ul>
+          </article>
+        </div>
+        <div class="tag-cloud" aria-label="Выходы компилятора">
+          <span class="tag">Позиционирование</span>
+          <span class="tag">Структура продукта</span>
+          <span class="tag">MVP</span>
+          <span class="tag">Бизнес-модель</span>
+          <span class="tag">Ценообразование</span>
+          <span class="tag">Лендинг</span>
+          <span class="tag">CRM-воронка</span>
+          <span class="tag">Продажи</span>
+          <span class="tag">Платежи</span>
+          <span class="tag">Поддержка</span>
+          <span class="tag">Техническая архитектура</span>
+          <span class="tag">API-интеграции</span>
+          <span class="tag">UI-приложения</span>
+          <span class="tag">Юридические черновики</span>
+          <span class="tag">Структура питча</span>
+          <span class="tag">Отчёт о рисках</span>
+          <span class="tag">План валидации</span>
+          <span class="tag">Метрики</span>
+          <span class="tag">Runtime-процессы</span>
+          <span class="tag">Карта интеграций</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="runtime">
+      <div class="container">
+        <header class="section-header centered">
+          <p class="section-tag">Среда выполнения</p>
+          <h2>Слои Metarhia Stack</h2>
+          <p>
+            Среда выполнения построена на Metarhia Stack — слоистой архитектуре
+            для API, доменной логики, доступа к данным, протоколов и инфраструктуры.
+          </p>
+        </header>
+        <div class="module-contract contract-5">
+          <div class="contract-item">
+            <span class="contract-key">API-слой</span>
+            <span class="contract-val">Эндпоинты, юниты, валидация схем</span>
+          </div>
+          <div class="contract-item">
+            <span class="contract-key">Доменный слой</span>
+            <span class="contract-val">Состояние приложения, процессы, бизнес-правила</span>
+          </div>
+          <div class="contract-item">
+            <span class="contract-key">Доступ к данным</span>
+            <span class="contract-val">PostgreSQL, Redis, Globalstorage</span>
+          </div>
+          <div class="contract-item">
+            <span class="contract-key">Протокольный слой</span>
+            <span class="contract-val">metacom, HTTP, WebSocket, webhooks</span>
+          </div>
+          <div class="contract-item">
+            <span class="contract-key">Инфраструктура</span>
+            <span class="contract-val">Логирование, планирование, потоки, sandbox</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog">
+      <div class="container">
+        <header class="section-header centered wide">
+          <p class="section-tag">Каталог модулей</p>
+          <h2>Повторно используемые мета-модули</h2>
+          <p>
+            Каталог мета-модулей с декларативной DSL-конфигурацией. Экспертно
+            проверенные блоки для безопасности, инфраструктуры, оркестрации, данных,
+            коммуникаций, коммерции и другого.
+          </p>
+        </header>
+        <div class="catalog-grid">
+          <article class="catalog-card">
+            <h3>Безопасность и доступ</h3>
+            <ul class="catalog-list">
+              <li>Auth: OAuth 2.0, OpenID, SSO</li>
+              <li>Passkeys, MFA / 2FA</li>
+              <li>Управление сессиями</li>
+              <li>RBAC</li>
+              <li>Логирование: access и audit logs</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Инфраструктура</h3>
+            <ul class="catalog-list">
+              <li>Балансировка нагрузки</li>
+              <li>Интеграция CDN</li>
+              <li>Ограничение частоты запросов</li>
+              <li>Service discovery</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Оркестрация</h3>
+            <ul class="catalog-list">
+              <li>Workflow engine</li>
+              <li>Saga</li>
+              <li>Планировщик</li>
+              <li>Очередь задач</li>
+              <li>Распределённые блокировки</li>
+              <li>Event bus</li>
+              <li>Webhook dispatcher</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Интеграция</h3>
+            <ul class="catalog-list">
+              <li>Протокольные коннекторы: REST, GraphQL, gRPC</li>
+              <li>Внешние мессенджеры: Telegram и др.</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Данные и хранилище</h3>
+            <ul class="catalog-list">
+              <li>Распределённая БД: Globalstorage
+                <ul>
+                  <li>Поиск и индексация</li>
+                  <li>Полнотекстовый поиск</li>
+                  <li>Непрерывное резервное копирование</li>
+                  <li>Непрерывная миграция</li>
+                  <li>Непрерывные вычисления</li>
+                </ul>
+              </li>
+              <li>Схемы</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Наблюдаемость</h3>
+            <ul class="catalog-list">
+              <li>Телеметрия и мониторинг</li>
+              <li>Отслеживание ошибок</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Коммуникации</h3>
+            <ul class="catalog-list">
+              <li>Chat engine</li>
+              <li>Чатботы</li>
+              <li>Лендинг</li>
+              <li>Ленты (новостной канал)</li>
+              <li>Email: доставка, получение, кампании</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Коммерция</h3>
+            <ul class="catalog-list">
+              <li>Платежи
+                <ul>
+                  <li>Типы: разовые, подписки, по использованию</li>
+                  <li>Функции: повторы, возвраты, выплаты, рефералы</li>
+                </ul>
+              </li>
+              <li>Продукт и клиент
+                <ul>
+                  <li>Онбординг клиентов</li>
+                  <li>Управление подписками</li>
+                  <li>Обратная связь</li>
+                  <li>Запросы функций и отчёты об ошибках</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Интеллект и инструменты</h3>
+            <ul class="catalog-list">
+              <li>Генерация отчётов</li>
+              <li>AI-интеграция</li>
+              <li>Security assistant</li>
+              <li>Календарь</li>
+              <li>Test runner</li>
+              <li>Parental control</li>
+              <li>Startup wizard</li>
+              <li>Pitch wizard</li>
+              <li>Module registry</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="formula" id="lifecycle">
+      <div class="container">
+        <header class="section-header centered">
+          <p class="section-tag">Жизненный цикл модуля</p>
+          <h2>От черновика до развёртывания</h2>
+          <p>
+            Каждый мета-модуль проходит проверку, генерацию, верификацию и
+            публикацию перед попаданием в production — с поддержкой отката.
+          </p>
+        </header>
+        <div class="tag-cloud" aria-label="Этапы жизненного цикла модуля">
+          <span class="tag tag-lifecycle">Draft</span>
+          <span class="tag tag-lifecycle">Reviewed draft</span>
+          <span class="tag tag-lifecycle">Generated</span>
+          <span class="tag tag-lifecycle">Reviewed module</span>
+          <span class="tag tag-lifecycle">Verified</span>
+          <span class="tag tag-lifecycle">Published</span>
+          <span class="tag tag-lifecycle">Deployed</span>
+          <span class="tag tag-lifecycle">Updated / Rolled Back</span>
+        </div>
+        <div class="formula-box" style="margin-top: 2rem;">
+          <code class="formula-code">Draft → Reviewed draft → Generated → Reviewed module → Verified → Published → Deployed → Updated / Rolled Back</code>
+        </div>
+      </div>
+    </section>
+
+    <section class="capabilities">
+      <div class="container">
+        <header class="section-header centered">
+          <p class="section-tag">Мета-модули</p>
+          <h2>Декларативные, композиционные, верифицируемые</h2>
+          <p>
+            Экспертно проверенные модули снижают риски безопасности, предотвращают
+            повторение ошибок и ускоряют сборку стартапа — дешевле, чем создание
+            с нуля.
+          </p>
+        </header>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
+            <h3>Декларативный DSL</h3>
+            <p>
+              Мета-модули используют декларативную DSL-конфигурацию. Основатели
+              и агенты настраивают поведение через метаданные — без отдельного кода
+              для каждого стартапа.
+            </p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"/>
+                <rect x="14" y="3" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/>
+                <rect x="3" y="14" width="7" height="7"/>
+              </svg>
+            </div>
+            <h3>Контракты модулей</h3>
+            <p>
+              Каждый модуль объявляет входы, выходы, ограничения, правила совместимости,
+              теги риска, версию, владельца, статус проверки и логику верификации.
+            </p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3>Экспертная проверка</h3>
+            <p>
+              AI, инженеры и доменные эксперты создают модули с обязательной
+              проверкой. Высокорисковые домены эскалируются к человеческому
+              суждению перед публикацией.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="docs">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Изучите справочник платформы</h2>
+          <p>
+            Записи архитектуры, ADR, глоссарий, схема мета-модулей и интерфейсы
+            подсистем — в репозитории platform.
+          </p>
+          <div class="cta-actions">
+            <a href="https://github.com/meta-qube/platform" class="btn btn-primary">Репозиторий platform</a>
+            <a href="https://github.com/meta-qube/platform/tree/main/handbook" class="btn btn-secondary">Справочник</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="https://meta-qube.com/images/metaqube.png" alt="" width="24" height="24">
+        <span>&copy; 2026 Meta Qube. Все права защищены.</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://meta-qube.com/ru/">Главный сайт</a>
+        <a href="https://founders.meta-qube.com/ru/">Для основателей</a>
+        <a href="https://capital.meta-qube.com/ru/">Для инвесторов</a>
+        <a href="mailto:timur@metarhia.com">Контакт</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    menuToggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', open);
+    });
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>

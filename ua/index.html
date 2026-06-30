@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meta Qube Platform — компілятор стартапів, середовище виконання операцій та каталог модулів. Перевірені мета-модулі з декларативною конфігурацією.">
+  <meta name="theme-color" content="#9333EA">
+  <title>Meta Qube Platform — Компілюй ідеї. Запускай операції.</title>
+
+  <link rel="alternate" hreflang="en" href="https://platform.meta-qube.com/">
+  <link rel="alternate" hreflang="uk" href="https://platform.meta-qube.com/ua/">
+  <link rel="alternate" hreflang="ru" href="https://platform.meta-qube.com/ru/">
+  <link rel="alternate" hreflang="x-default" href="https://platform.meta-qube.com/">
+
+  <link rel="icon" href="https://meta-qube.com/favicon.ico" sizes="any">
+  <link rel="icon" href="https://meta-qube.com/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="https://meta-qube.com/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="https://meta-qube.com/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="audience-platform">
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="/ua/" class="logo">
+        <img src="https://meta-qube.com/images/metaqube.png" alt="" width="36" height="36">
+        Meta Qube
+      </a>
+      <span class="audience-badge">Платформа</span>
+      <nav class="lang-switch" aria-label="Мова">
+        <a href="/" class="lang-link" hreflang="en">EN</a>
+        <a href="/ua/" class="lang-link active" hreflang="uk" aria-current="page">UA</a>
+        <a href="/ru/" class="lang-link" hreflang="ru">RU</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Відкрити меню" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="4" y1="17" x2="20" y2="17"/>
+        </svg>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="#subsystems">Підсистеми</a>
+        <a href="#runtime">Runtime</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#lifecycle">Життєвий цикл</a>
+        <a href="#docs" class="nav-cta">Довідник</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-glow"></div>
+        <div class="hero-grid"></div>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="eyebrow">Meta Qube Platform</p>
+          <h1>Компілюй ідеї.<br><span>Запускай операції.</span></h1>
+          <p class="hero-lead">
+            Meta Qube Platform перетворює вхідні дані засновника на метадані, які
+            налаштовують надійні, настроювані мета-модулі та запускають бізнес-операції
+            в хмарі. Експертно перевірені модулі дозволяють стартапам повторно
+            використовувати перевірені інструменти замість створення з нуля.
+          </p>
+          <div class="hero-actions">
+            <a href="#catalog" class="btn btn-primary">Переглянути модулі</a>
+            <a href="#subsystems" class="btn btn-secondary">Дослідити підсистеми</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img
+            class="hero-cube"
+            src="https://meta-qube.com/images/metaqube.png"
+            alt="Meta Qube — модульна архітектура стартапу у вигляді воксельного куба-глобуса"
+            width="448"
+            height="448"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="pillars" aria-label="Три підсистеми платформи">
+      <div class="container pillars-grid pillars-grid-3">
+        <div class="pillar">
+          <div class="pillar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <div class="pillar-label">Компілятор стартапів</div>
+          <div class="pillar-desc">Керована класифікація та збірка стартап-пакетів</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <div class="pillar-label">Середовище виконання</div>
+          <div class="pillar-desc">Хмарне виконання робочих процесів, агентів та інтеграцій</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7"/>
+              <rect x="14" y="3" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/>
+            </svg>
+          </div>
+          <div class="pillar-label">Каталог модулів</div>
+          <div class="pillar-desc">Реєстр декларативних мета-модулів зі статусом перевірки</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="subsystems">
+      <div class="container">
+        <header class="section-header centered">
+          <p class="section-tag">Підсистеми</p>
+          <h2>Три підсистеми — одна платформа</h2>
+          <p>
+            Компілятор стартапів збирає пакети з Каталогу модулів. Середовище
+            виконання запускає їх у хмарі. Разом вони перетворюють ідеї на
+            працюючі бізнес-операції.
+          </p>
+        </header>
+        <div class="platform-grid">
+          <article class="platform-card">
+            <div class="platform-badge">Компілятор стартапів</div>
+            <h3>Компілюй ідеї</h3>
+            <p>
+              Керована класифікація та збірка. Компілятор збирає відповіді засновника,
+              обирає сумісні мета-модулі та формує конфігурацію, готову до запуску.
+            </p>
+            <ul class="feature-list">
+              <li>Позиціонування, структура продукту та MVP</li>
+              <li>Бізнес-модель, ціноутворення та лендінг</li>
+              <li>CRM-воронка, продажі та платежі</li>
+              <li>Технічна архітектура, API та UI-додатки</li>
+              <li>Юридичні чернетки, пітч та звіт про ризики</li>
+              <li>План валідації, метрики та runtime-процеси</li>
+            </ul>
+          </article>
+          <article class="platform-card">
+            <div class="platform-badge accent-green">Середовище виконання</div>
+            <h3>Запускай операції</h3>
+            <p>
+              Хмарне виконання бізнес-процесів з першого дня. Побудовано на
+              <a href="https://github.com/metarhia/Docs">Metarhia Stack</a> —
+              шари API, домену, доступу до даних, протоколів та інфраструктури.
+            </p>
+            <ul class="feature-list">
+              <li>Робочі процеси, агенти, планувальники та черги</li>
+              <li>Інтеграції: CRM, email, платежі, месенджери</li>
+              <li>Мультитенантність, автентифікація та аудит</li>
+              <li>Розгортання, спостереження та відкат</li>
+            </ul>
+          </article>
+          <article class="platform-card">
+            <div class="platform-badge accent-amber">Каталог модулів</div>
+            <h3>Повторно використовувані мета-модулі</h3>
+            <p>
+              Каталог мета-модулів з декларативною DSL-конфігурацією. Кожен модуль
+              оголошує контракти, правила сумісності, теги ризику та статус перевірки.
+            </p>
+            <ul class="feature-list">
+              <li>Пошук, перевірка сумісності та вибір модулів</li>
+              <li>Історія версій та значки перевірки</li>
+              <li>Життєвий цикл від чернетки до розгортання</li>
+              <li>Експертна перевірка для високоризикових доменів</li>
+            </ul>
+          </article>
+          <article class="platform-card">
+            <div class="platform-badge">Міжпідсистемний потік</div>
+            <h3>Від вводу до працюючих операцій</h3>
+            <p>
+              Вхідні дані проходять класифікацію, вибір модулів, експертну перевірку,
+              розгортання runtime та безперервні операції — з каталогом як єдиним
+              джерелом істини про модулі.
+            </p>
+            <ul class="feature-list">
+              <li>Компілятор → Каталог: вибір сумісних модулів</li>
+              <li>Компілятор → Runtime: конфігурація розгортання</li>
+              <li>Каталог → Runtime: артефакти для розгортання</li>
+              <li>Runtime → Компілятор: метрики та стан стартапу</li>
+            </ul>
+          </article>
+        </div>
+        <div class="tag-cloud" aria-label="Виходи компілятора">
+          <span class="tag">Позиціонування</span>
+          <span class="tag">Структура продукту</span>
+          <span class="tag">MVP</span>
+          <span class="tag">Бізнес-модель</span>
+          <span class="tag">Ціноутворення</span>
+          <span class="tag">Лендінг</span>
+          <span class="tag">CRM-воронка</span>
+          <span class="tag">Продажі</span>
+          <span class="tag">Платежі</span>
+          <span class="tag">Підтримка</span>
+          <span class="tag">Технічна архітектура</span>
+          <span class="tag">API-інтеграції</span>
+          <span class="tag">UI-додатки</span>
+          <span class="tag">Юридичні чернетки</span>
+          <span class="tag">Структура пітчу</span>
+          <span class="tag">Звіт про ризики</span>
+          <span class="tag">План валідації</span>
+          <span class="tag">Метрики</span>
+          <span class="tag">Runtime-процеси</span>
+          <span class="tag">Карта інтеграцій</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="runtime">
+      <div class="container">
+        <header class="section-header centered">
+          <p class="section-tag">Середовище виконання</p>
+          <h2>Шари Metarhia Stack</h2>
+          <p>
+            Середовище виконання побудовано на Metarhia Stack — шаровій архітектурі
+            для API, доменної логіки, доступу до даних, протоколів та інфраструктури.
+          </p>
+        </header>
+        <div class="module-contract contract-5">
+          <div class="contract-item">
+            <span class="contract-key">API-шар</span>
+            <span class="contract-val">Ендпоінти, юніти, валідація схем</span>
+          </div>
+          <div class="contract-item">
+            <span class="contract-key">Доменний шар</span>
+            <span class="contract-val">Стан додатку, процеси, бізнес-правила</span>
+          </div>
+          <div class="contract-item">
+            <span class="contract-key">Доступ до даних</span>
+            <span class="contract-val">PostgreSQL, Redis, Globalstorage</span>
+          </div>
+          <div class="contract-item">
+            <span class="contract-key">Протокольний шар</span>
+            <span class="contract-val">metacom, HTTP, WebSocket, webhooks</span>
+          </div>
+          <div class="contract-item">
+            <span class="contract-key">Інфраструктура</span>
+            <span class="contract-val">Логування, планування, потоки, sandbox</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog">
+      <div class="container">
+        <header class="section-header centered wide">
+          <p class="section-tag">Каталог модулів</p>
+          <h2>Повторно використовувані мета-модулі</h2>
+          <p>
+            Каталог мета-модулів з декларативною DSL-конфігурацією. Експертно
+            перевірені блоки для безпеки, інфраструктури, оркестрації, даних,
+            комунікацій, комерції та іншого.
+          </p>
+        </header>
+        <div class="catalog-grid">
+          <article class="catalog-card">
+            <h3>Безпека та доступ</h3>
+            <ul class="catalog-list">
+              <li>Auth: OAuth 2.0, OpenID, SSO</li>
+              <li>Passkeys, MFA / 2FA</li>
+              <li>Управління сесіями</li>
+              <li>RBAC</li>
+              <li>Логування: access та audit logs</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Інфраструктура</h3>
+            <ul class="catalog-list">
+              <li>Балансування навантаження</li>
+              <li>Інтеграція CDN</li>
+              <li>Обмеження частоти запитів</li>
+              <li>Service discovery</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Оркестрація</h3>
+            <ul class="catalog-list">
+              <li>Workflow engine</li>
+              <li>Saga</li>
+              <li>Планувальник</li>
+              <li>Черга задач</li>
+              <li>Розподілені блокування</li>
+              <li>Event bus</li>
+              <li>Webhook dispatcher</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Інтеграція</h3>
+            <ul class="catalog-list">
+              <li>Протокольні конектори: REST, GraphQL, gRPC</li>
+              <li>Зовнішні месенджери: Telegram тощо</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Дані та сховище</h3>
+            <ul class="catalog-list">
+              <li>Розподілена БД: Globalstorage
+                <ul>
+                  <li>Пошук та індексація</li>
+                  <li>Повнотекстовий пошук</li>
+                  <li>Безперервне резервне копіювання</li>
+                  <li>Безперервна міграція</li>
+                  <li>Безперервні обчислення</li>
+                </ul>
+              </li>
+              <li>Схеми</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Спостереження</h3>
+            <ul class="catalog-list">
+              <li>Телеметрія та моніторинг</li>
+              <li>Відстеження помилок</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Комунікації</h3>
+            <ul class="catalog-list">
+              <li>Chat engine</li>
+              <li>Чатботи</li>
+              <li>Лендінг</li>
+              <li>Стрічки (новинний канал)</li>
+              <li>Email: доставка, отримання, кампанії</li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Комерція</h3>
+            <ul class="catalog-list">
+              <li>Платежі
+                <ul>
+                  <li>Типи: разові, підписки, за використання</li>
+                  <li>Функції: повтори, повернення, виплати, реферали</li>
+                </ul>
+              </li>
+              <li>Продукт та клієнт
+                <ul>
+                  <li>Онбординг клієнтів</li>
+                  <li>Управління підписками</li>
+                  <li>Зворотний зв'язок</li>
+                  <li>Запити функцій та звіти про помилки</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+          <article class="catalog-card">
+            <h3>Інтелект та інструменти</h3>
+            <ul class="catalog-list">
+              <li>Генерація звітів</li>
+              <li>AI-інтеграція</li>
+              <li>Security assistant</li>
+              <li>Календар</li>
+              <li>Test runner</li>
+              <li>Parental control</li>
+              <li>Startup wizard</li>
+              <li>Pitch wizard</li>
+              <li>Module registry</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="formula" id="lifecycle">
+      <div class="container">
+        <header class="section-header centered">
+          <p class="section-tag">Життєвий цикл модуля</p>
+          <h2>Від чернетки до розгортання</h2>
+          <p>
+            Кожен мета-модуль проходить перевірку, генерацію, верифікацію та
+            публікацію перед потраплянням у production — з підтримкою відкату.
+          </p>
+        </header>
+        <div class="tag-cloud" aria-label="Етапи життєвого циклу модуля">
+          <span class="tag tag-lifecycle">Draft</span>
+          <span class="tag tag-lifecycle">Reviewed draft</span>
+          <span class="tag tag-lifecycle">Generated</span>
+          <span class="tag tag-lifecycle">Reviewed module</span>
+          <span class="tag tag-lifecycle">Verified</span>
+          <span class="tag tag-lifecycle">Published</span>
+          <span class="tag tag-lifecycle">Deployed</span>
+          <span class="tag tag-lifecycle">Updated / Rolled Back</span>
+        </div>
+        <div class="formula-box" style="margin-top: 2rem;">
+          <code class="formula-code">Draft → Reviewed draft → Generated → Reviewed module → Verified → Published → Deployed → Updated / Rolled Back</code>
+        </div>
+      </div>
+    </section>
+
+    <section class="capabilities">
+      <div class="container">
+        <header class="section-header centered">
+          <p class="section-tag">Мета-модулі</p>
+          <h2>Декларативні, композиційні, верифіковані</h2>
+          <p>
+            Експертно перевірені модулі знижують ризики безпеки, запобігають
+            повторенню помилок та прискорюють збірку стартапу — дешевше, ніж
+            створення з нуля.
+          </p>
+        </header>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
+            <h3>Декларативний DSL</h3>
+            <p>
+              Мета-модулі використовують декларативну DSL-конфігурацію. Засновники
+              та агенти налаштовують поведінку через метадані — без окремого коду
+              для кожного стартапу.
+            </p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"/>
+                <rect x="14" y="3" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/>
+                <rect x="3" y="14" width="7" height="7"/>
+              </svg>
+            </div>
+            <h3>Контракти модулів</h3>
+            <p>
+              Кожен модуль оголошує входи, виходи, обмеження, правила сумісності,
+              теги ризику, версію, власника, статус перевірки та логіку верифікації.
+            </p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3>Експертна перевірка</h3>
+            <p>
+              AI, інженери та доменні експерти створюють модулі з обов'язковою
+              перевіркою. Високоризикові домени ескалуються до людського судження
+              перед публікацією.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="docs">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Дослідіть довідник платформи</h2>
+          <p>
+            Записи архітектури, ADR, глосарій, схема мета-модулів та інтерфейси
+            підсистем — у репозиторії platform.
+          </p>
+          <div class="cta-actions">
+            <a href="https://github.com/meta-qube/platform" class="btn btn-primary">Репозиторій platform</a>
+            <a href="https://github.com/meta-qube/platform/tree/main/handbook" class="btn btn-secondary">Довідник</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="https://meta-qube.com/images/metaqube.png" alt="" width="24" height="24">
+        <span>&copy; 2026 Meta Qube. Усі права захищені.</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://meta-qube.com/ua/">Головний сайт</a>
+        <a href="https://founders.meta-qube.com/ua/">Для засновників</a>
+        <a href="https://capital.meta-qube.com/ua/">Для інвесторів</a>
+        <a href="mailto:timur@metarhia.com">Контакт</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    menuToggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', open);
+    });
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
