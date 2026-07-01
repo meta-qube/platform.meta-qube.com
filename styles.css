@@ -78,9 +78,17 @@ a:hover {
   container-name: site-header;
   position: relative;
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+  padding-block: 0.75rem 0.875rem;
+  min-width: 0;
+}
+
+.header-top {
+  display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding-block: 1rem;
   min-width: 0;
 }
 
@@ -103,17 +111,9 @@ a:hover {
 .nav {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: clamp(0.625rem, 1.5vw, 1.5rem);
-  flex-shrink: 1;
   min-width: 0;
-}
-
-@container site-header (min-width: 62rem) {
-  .nav {
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    row-gap: 0.35rem;
-  }
 }
 
 .nav a {
@@ -267,6 +267,7 @@ a:hover {
 
 .hero-content {
   max-width: 34rem;
+  container-type: inline-size;
 }
 
 .eyebrow {
@@ -290,14 +291,20 @@ a:hover {
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-size: clamp(1.125rem, 10.5cqw, 3.75rem);
   font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.03em;
   margin: 0 0 1.25rem;
 }
 
-.hero h1 span {
+.hero h1 .hero-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero h1 .hero-line-accent {
+  font-size: 0.9em;
   background: linear-gradient(135deg, var(--text) 30%, var(--accent-bright));
   -webkit-background-clip: text;
   background-clip: text;

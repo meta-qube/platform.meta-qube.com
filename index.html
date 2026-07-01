@@ -26,6 +26,7 @@
 <body class="audience-platform">
   <header class="site-header" id="header">
     <div class="container header-inner">
+      <div class="header-top">
       <a href="/" class="logo">
         <img src="https://meta-qube.com/images/metaqube.png" alt="" width="36" height="36">
         Meta Qube
@@ -43,12 +44,13 @@
           <line x1="4" y1="17" x2="20" y2="17"/>
         </svg>
       </button>
+      </div>
       <nav class="nav" id="nav">
         <a href="#subsystems">Subsystems</a>
         <a href="#runtime">Runtime</a>
         <a href="#catalog">Catalog</a>
+        <a href="#delivery">Delivery</a>
         <a href="#lifecycle">Lifecycle</a>
-        <a href="#docs" class="nav-cta">Handbook</a>
       </nav>
     </div>
   </header>
@@ -62,7 +64,7 @@
       <div class="container hero-inner">
         <div class="hero-content">
           <p class="eyebrow">Meta Qube Platform</p>
-          <h1>Compile ideas.<br><span>Run operations.</span></h1>
+          <h1><span class="hero-line">Compile ideas</span><span class="hero-line hero-line-accent">Run operations</span></h1>
           <p class="hero-lead">
             Meta Qube Platform turns founder input into metadata that configures
             reliable, customizable meta-modules and runs the resulting business
@@ -264,9 +266,12 @@
           <p class="section-tag">Module Catalog</p>
           <h2>Reusable meta-modules</h2>
           <p>
-            A catalog of reusable meta-modules with declarative DSL-style
-            configuration. Expert-reviewed blocks for security, infrastructure,
-            orchestration, data, communication, commerce, and more.
+            Supply chains get breached every month — npm packages, GitHub
+            accounts, dependency-based infrastructure. A catalog of reusable
+            meta-modules with declarative DSL-style configuration turns
+            security, infrastructure, orchestration, data, communication, and
+            commerce into shared infrastructure that's hardened once and
+            reused by every startup on the platform.
           </p>
         </header>
         <div class="catalog-grid">
@@ -278,6 +283,7 @@
               <li>Session management</li>
               <li>RBAC</li>
               <li>Logging: access and audit logs</li>
+              <li>Supply chain security</li>
             </ul>
           </article>
           <article class="catalog-card">
@@ -377,6 +383,35 @@
       </div>
     </section>
 
+    <section id="delivery">
+      <div class="container">
+        <header class="section-header centered">
+          <p class="section-tag">Modern delivery</p>
+          <h2>PWA &amp; local-first, not native mobile</h2>
+          <p>
+            Native mobile apps have become expensive to build and maintain for
+            the margin they return. Modern browsers now cover most of that gap
+            natively — Meta Qube ships progressive web apps that are
+            local-first: full cross-platform products for phones and laptops,
+            distributed through app marketplaces or directly around them.
+          </p>
+        </header>
+        <div class="tag-cloud" aria-label="Browser platform capabilities">
+          <span class="tag">HTTP/3</span>
+          <span class="tag">WebRTC</span>
+          <span class="tag">Web Crypto API</span>
+          <span class="tag">OPFS</span>
+          <span class="tag">IndexedDB</span>
+          <span class="tag">WebAssembly</span>
+          <span class="tag">Service Worker</span>
+          <span class="tag">Notifications API</span>
+          <span class="tag">WebTransport</span>
+          <span class="tag">WebSocket</span>
+          <span class="tag">Peripheral device access</span>
+        </div>
+      </div>
+    </section>
+
     <section class="formula" id="lifecycle">
       <div class="container">
         <header class="section-header centered">
@@ -409,9 +444,12 @@
           <p class="section-tag">Meta-modules</p>
           <h2>Declarative, composable, verifiable</h2>
           <p>
-            Expert-reviewed modules reduce security risk, prevent repeated errors,
-            and accelerate startup assembly — with lower cost than rebuilding
-            from scratch.
+            About 80% of any startup's functionality repeats across products —
+            payments, auth, landing pages, bots. A reusable module costs only
+            20-30% more to build than a one-off, extracting config and metadata
+            into DSLs and schemas — and it pays that back many times over:
+            expert-reviewed modules reduce security risk, prevent repeated
+            errors, and accelerate startup assembly.
           </p>
         </header>
         <div class="card-grid">

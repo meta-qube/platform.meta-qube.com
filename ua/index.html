@@ -26,6 +26,7 @@
 <body class="audience-platform">
   <header class="site-header" id="header">
     <div class="container header-inner">
+      <div class="header-top">
       <a href="/ua/" class="logo">
         <img src="https://meta-qube.com/images/metaqube.png" alt="" width="36" height="36">
         Meta Qube
@@ -43,12 +44,13 @@
           <line x1="4" y1="17" x2="20" y2="17"/>
         </svg>
       </button>
+      </div>
       <nav class="nav" id="nav">
         <a href="#subsystems">Підсистеми</a>
         <a href="#runtime">Runtime</a>
         <a href="#catalog">Каталог</a>
+        <a href="#delivery">Доставка</a>
         <a href="#lifecycle">Життєвий цикл</a>
-        <a href="#docs" class="nav-cta">Довідник</a>
       </nav>
     </div>
   </header>
@@ -62,7 +64,7 @@
       <div class="container hero-inner">
         <div class="hero-content">
           <p class="eyebrow">Meta Qube Platform</p>
-          <h1>Компілюй ідеї.<br><span>Запускай операції.</span></h1>
+          <h1><span class="hero-line">Компілюй ідеї</span><span class="hero-line hero-line-accent">Запускай операції</span></h1>
           <p class="hero-lead">
             Meta Qube Platform перетворює вхідні дані засновника на метадані, які
             налаштовують надійні, настроювані мета-модулі та запускають бізнес-операції
@@ -261,9 +263,12 @@
           <p class="section-tag">Каталог модулів</p>
           <h2>Повторно використовувані мета-модулі</h2>
           <p>
-            Каталог мета-модулів з декларативною DSL-конфігурацією. Експертно
-            перевірені блоки для безпеки, інфраструктури, оркестрації, даних,
-            комунікацій, комерції та іншого.
+            Щомісяця зламують чийсь supply chain — npm-бібліотеки,
+            GitHub-акаунти, інфраструктуру на залежностях. Каталог
+            мета-модулів із декларативною DSL-конфігурацією перетворює
+            безпеку, інфраструктуру, оркестрацію, дані, комунікації та
+            комерцію на спільну інфраструктуру, один раз захищену і придатну
+            для повторного використання кожним стартапом на платформі.
           </p>
         </header>
         <div class="catalog-grid">
@@ -275,6 +280,7 @@
               <li>Управління сесіями</li>
               <li>RBAC</li>
               <li>Логування: access та audit logs</li>
+              <li>Supply chain security</li>
             </ul>
           </article>
           <article class="catalog-card">
@@ -374,6 +380,36 @@
       </div>
     </section>
 
+    <section id="delivery">
+      <div class="container">
+        <header class="section-header centered">
+          <p class="section-tag">Сучасна доставка</p>
+          <h2>PWA і local-first замість нативного мобільного</h2>
+          <p>
+            Нативні мобільні застосунки стали дорогими в розробці та
+            підтримці відносно віддачі. Сучасні браузери закривають більшу
+            частину цього розриву нативно — Meta Qube випускає прогресивні
+            веб-застосунки за принципом local-first: повноцінні кросплатформні
+            продукти для мобілок і ноутбуків, які поширюються через маркети
+            застосунків або в обхід них.
+          </p>
+        </header>
+        <div class="tag-cloud" aria-label="Можливості браузерних платформ">
+          <span class="tag">HTTP/3</span>
+          <span class="tag">WebRTC</span>
+          <span class="tag">Web Crypto API</span>
+          <span class="tag">OPFS</span>
+          <span class="tag">IndexedDB</span>
+          <span class="tag">WebAssembly</span>
+          <span class="tag">Service Worker</span>
+          <span class="tag">Notifications API</span>
+          <span class="tag">WebTransport</span>
+          <span class="tag">WebSocket</span>
+          <span class="tag">Доступ до периферії</span>
+        </div>
+      </div>
+    </section>
+
     <section class="formula" id="lifecycle">
       <div class="container">
         <header class="section-header centered">
@@ -406,9 +442,13 @@
           <p class="section-tag">Мета-модулі</p>
           <h2>Декларативні, композиційні, верифіковані</h2>
           <p>
-            Експертно перевірені модулі знижують ризики безпеки, запобігають
-            повторенню помилок та прискорюють збірку стартапу — дешевше, ніж
-            створення з нуля.
+            Близько 80% функціональності будь-якого стартапу повторюється від
+            продукту до продукту — платежі, авторизація, лендінги, боти.
+            Модуль для повторного використання коштує лише на 20–30% дорожче
+            одноразового, якщо винести конфіги та метадані в DSL і схеми, —
+            і окуповує це багаторазово: експертно перевірені модулі знижують
+            ризики безпеки, запобігають повторенню помилок та прискорюють
+            збірку стартапу.
           </p>
         </header>
         <div class="card-grid">
